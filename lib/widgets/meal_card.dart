@@ -7,6 +7,7 @@ class Meal {
   final String? strArea;
   final String? strInstructions;
   final String? strYoutube;
+  final String? strCountry;
 
   Meal({
     required this.idMeal,
@@ -16,6 +17,7 @@ class Meal {
     this.strArea,
     this.strInstructions,
     this.strYoutube,
+    this.strCountry,
   });
 
   factory Meal.fromJson(Map<String, dynamic> json) {
@@ -27,6 +29,7 @@ class Meal {
       strArea: json['strArea'] ?? '',
       strInstructions: json['strInstructions'] ?? '',
       strYoutube: json['strYoutube'] ?? '',
+      strCountry: json['strCountry'] ?? '',
     );
   }
 }

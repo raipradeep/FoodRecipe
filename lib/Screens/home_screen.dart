@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
         setState(() {
-          categories = (data['categories'])
+          categories = (data['categories'] as List)
               .map((e) => Category.fromJson(e))
               .toList();
           isLoading = false;
@@ -63,10 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : Padding(
-        padding: const EdgeInsets.all(12),
+      body: isLoading ? const Center(child: CircularProgressIndicator())
+          : Padding(padding: const EdgeInsets.all(12),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, //

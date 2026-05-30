@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 
 import '../models/meal.dart';
 import '../widgets/meal_card.dart';
+import 'meal_detail_screen.dart';
 
 class MealListScreen extends StatefulWidget {
   final String category;
@@ -66,10 +67,10 @@ class _MealListScreenState extends State<MealListScreen> {
           return MealListItem(
               meals : meal,
               onTap : () {
-                /*Navigator.push(context,
+                Navigator.push(context,
                     MaterialPageRoute(
                         builder: (_) => MealDetailScreen(mealId: meal.idMeal)),
-                );*/
+                );
               }
           );
         },

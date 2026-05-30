@@ -29,7 +29,7 @@ class MealListItem extends StatelessWidget {
         child: Row(
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(50),
               child: CachedNetworkImage(
                 imageUrl: meals.strMealThumb,
                 width: 70,
@@ -54,17 +54,17 @@ class MealListItem extends StatelessWidget {
                     meals.strMeal,
                     style: const TextStyle(
                       fontSize: 15,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                     ),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                   const SizedBox(width: 6),
                   Text(
-                    meals.strCategory??'',
+                    meals.strCountry??'',
                     style: TextStyle(
                       fontSize: 12,
-                      color: Colors.grey[500],
+                      color: Colors.black54,
                     ),
                   ),
                 ],
